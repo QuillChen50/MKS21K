@@ -1,0 +1,25 @@
+Commands and Fxns
+
+git status
+Shows what is being tracked.
+
+git log
+Shows history of commit.
+
+git add <filename>
+Gets changes tracked by git. (Waiting in line to be commited)
+
+git commit
+Ties file to Local Repository.
+-Usually need to press i afterwards to insert a commit message
+-Then Press esc and :wq to get back to terminal
+
+git commit -a
+Adds and Commit in one move
+
+git push
+Publishes to Git whatever that has been commited
+
+Git Pull
+Updates Local Repository w/ whats on Git
+
