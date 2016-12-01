@@ -41,7 +41,7 @@ return 1;
 }
 
 public String toString(){
-return circulationStatus() + callNumber;
+return title + author + ISBN + circulationStatus() + callNumber;
 }
 
 }
