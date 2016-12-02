@@ -18,7 +18,19 @@ dueDate = due;
 }
 
 public void returned(){
+currentHolder = "";
+dueDate = "";
+}
+  
+public String circulation(){
+  if (currentHolder == ""){
+return currentHolder + dueDate + "book available on shelves";}
+  else {
+return currentHolder + dueDate + "book not available";
 
-
-?
+public String toString(){
+return title + author + ISBN + circulation()
+}
+    
+}
 
