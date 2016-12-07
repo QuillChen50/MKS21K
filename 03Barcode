@@ -1,0 +1,27 @@
+public class Barcode implements Comparable<Barcode>{
+// instance variables
+   private String _zip;
+   private int _checkDigit;
+
+// constructors
+//precondtion: _zip.length() = 5 and zip contains only digits.
+public Barcode(){
+  if (  (_zip.length() != 5) || 
+        (allDigits(_zip) == false)  )
+        {return false;}   
+        
+        
+        }
+
+
+//checks if _zip is all digits
+  public boolean allDigits (String str){
+  if (str = "" || str.length = 0)
+  {return false}
+  
+  for (int i = 0; i < str.length() - 1; i++){
+  if (!Character.isDigit(str.charAt(i)))
+    {return false}
+    }
+    return true
+                                        }
