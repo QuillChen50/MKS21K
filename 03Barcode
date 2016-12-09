@@ -8,12 +8,16 @@ public class Barcode implements Comparable<Barcode>{
 public Barcode(){
   if (  (_zip.length() != 5) || 
         (allDigits(_zip) == false)  )
-        {return false;}   
-        
-        
+        {return false;}
+ _zip = 12345;       
         }
-
-
+public Barcode(String zip){
+  if (  (_zip.length() != 5) || 
+        (allDigits(_zip) == false)  )
+        {return false;}
+ _zip = zip;
+        }
+        
 //checks if _zip is all digits
   public boolean allDigits (String str){
   if (str = "" || str.length = 0)
@@ -25,3 +29,12 @@ public Barcode(){
     }
     return true
                                         }
+  
+ //comparing 2 barcodes, especially to see if they are the same
+  public int compareTo(Barcode other){
+  return _zip.compareTo(other._zip);
+  }
+ 
+ //convert 5 digit zipcodes to barcodes
+  public static java.lang.String toCode(java.lang.String zip){
+  
