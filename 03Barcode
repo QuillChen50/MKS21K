@@ -1,8 +1,24 @@
+java.util*
+
 public class Barcode implements Comparable<Barcode>{
 // instance variables
    private String _zip;
    private int _checkDigit;
-
+   private ArrayList L;
+   
+   L = {"||:::", 
+        ":::||", 
+        "::|:|", 
+        "::||:", 
+        ":|::|", 
+        ":|:|:", 
+        ":||::", 
+        "|:::|", 
+        "|::|:", 
+        "|:|::"}
+        
+  ArrayList<String> M = new ArrayList<String> (Array.asList(L));      
+        
 // constructors
 //precondtion: _zip.length() = 5 and zip contains only digits.
 public Barcode(){
@@ -37,4 +53,5 @@ public Barcode(String zip){
  
  //convert 5 digit zipcodes to barcodes
   public static java.lang.String toCode(java.lang.String zip){
+   
   
