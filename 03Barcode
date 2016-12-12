@@ -118,7 +118,8 @@ String regex2 = "[a-zA-Z0-9 ]*"
   throw new java.lang.IllegalArgumentException("invalid encoded int");
   }
   
-_zip = codeToZip  
+_zip = codeToZip;
+return codeToZip;
   
   }
   
