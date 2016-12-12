@@ -30,7 +30,7 @@ public Barcode(){
 public Barcode(String zip){
   if (  (_zip.length() != 5) || 
         (allDigits(_zip) == false)  )
-        {return false;}
+        throw java.lang.IllegalArgumentException;
  _zip = zip;
         }
         
@@ -80,12 +80,12 @@ public Barcode(String zip){
  
   //length of the barcode is not 32
   if (barcode.length() != 32){
-  throw new java.lang.IllegalArgumentException();
+  throw new java.lang.IllegalArgumentException("length of the barcode is not 32");
   }
   
   //the left and rigthmost charcters are not '|'
   if (code.charAt(0) != '|' || code.charAt(31) != '|'){
-  throw new java.lang.IllegalArgumentException();
+  throw new java.lang.IllegalArgumentException("the left and rigthmost charcters are not |");
   }
   
   //non-barcode characters are used
@@ -93,20 +93,20 @@ public Barcode(String zip){
   while (i < 6) {
   for (code.substring(1 + (5*i), 5 + (5*i)) : L){
   allbarchar ++;}
-  i = i + 1;
+  i++;}
   if (allbarchar != 6){
-  throw new java.lang.IllegalArgumentException();
-  }}
+  throw new java.lang.IllegalArgumentException("non-barcode characters are used");
+  
   
   //checksum is invalid
-  String codeToZip = "" 
+  String codeToZip = ""; 
   while (i < 6) {
   for (int j = 0; j < 10 , j++){
   if (code.substring(1 + (5*i), 5 + (5*i)).equals(L.charAt(j))){
   codeToZip = codeToZip + j;}}
   int converted = Integer.parseInt(codeToZip);
   if (converted % 10 != _checkDigit){
-  throw new java.lang.IllegalArgumentException();
+  throw new java.lang.IllegalArgumentException("checksum is invalid");
   }
 
 //checking for invalid encoded int
@@ -115,8 +115,11 @@ public Barcode(String zip){
 String regex1 = "[0-9]+"
 String regex2 = "[a-zA-Z0-9 ]*"
   if (!(code.matches(regex2)) || !(codeToZip.matches(regex1))){
-  
+  throw new java.lang.IllegalArgumentException("invalid encoded int");
   }
+  
+_zip = codeToZip  
+  
   }
   
   
