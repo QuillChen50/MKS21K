@@ -1,34 +1,39 @@
 public class Sorts{
   
 public static String name(){
-    return "01.Last.First"; 
+    return "10.Chen.Jenny"; 
   }
  
 public static void selectionSort(int[] data){  
-    int need2Sort;
+    int bestValIndex;
     int bestVal;
-    need2Sort = data.length;
-  for  
-  for (int i = 0; i < data.length() - 1; i--){
-    if (bestVal > data[i]){
-      bestVal = data[i];}
-    
+    bestValIndex = 0;
+    bestVal = data[data.length()]
+	for (int p = 0; p < data.length(); p++){
+	    for (int i = 1; i < data.length() - 1; i++){
+	    if (data[i] < bestVal){
+		bestVal = data[i];
+	        bestValIndex = i;}
+	    }
+	    temp = data[p];
+	    data[p] = bestVal;
+	    data[bestValIndex] = temp;}
       
   }
     
     
 
 public static void insertionSort(int[] data){    
-  for (int i = 0; i < data.length; i++){
-    if (data[i] > data[i + 1]) {
-      int temp = data[i];
-      data[i] = data[i+1];
-      data[i+1] = temp;     
-                               }
-                                       
-  else 
-  {for }
+
+    
+	for (int p = 0; p < data.length(); p++){
+	    for (int i = 1; i < data.length() - 1; i++){  
+		if (data[i] > data[i + 1]) {
+		    int temp = data[i];
+		    data[i] = data[i+1];
+		    data[i+1] = temp;     
                                             }
+                                                       }
     
     
     
