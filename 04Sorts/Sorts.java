@@ -30,11 +30,15 @@ public static void insertionSort(int[] data){
  bestValIndex = 0;
  bestVal = data[0]
   
-	for (int p = 1; p < data.length(); p++)  
+        for (int i = 0; i < data.length(); i++) {
+		int tempi = data[i];
+	for (int p = 1; p < data.length(); p++) { 
 		if (data[p] < bestVal) {
 		    bestValIndex = p;
-		    bestVal = data[p]
-		while  (bestVal <= data[bestValIndex - i)
+	            int temp = data[p];
+		    bestVal = temp;}}
+	            data[bestValIndex] = tempi;
+	            data[i] = bestVal;
                                }
                                             }
     
