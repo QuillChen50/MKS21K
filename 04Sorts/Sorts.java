@@ -44,4 +44,6 @@ public static void insertionSort(int[] data){
     
     
     
+    public static void main(Strings[] str){
+
 }
