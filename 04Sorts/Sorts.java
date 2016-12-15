@@ -9,34 +9,32 @@ public static void selectionSort(int[] data){
     int bestVal;
     bestValIndex = 0;
     bestVal = data[0]
-	for (int p = 0; p < data.length(); p++){ //loop that takes each number from the data
-	    for (int i = 1; i < data.length() - 1; i++){ //loop comparing that # with those after it
+	for (int p = 0; p < data.length(); p++){ 
+//loop that takes each number from the data
+	    for (int i = 1; i < data.length() - 1; i++){ 
+//loop comparing that # with those after it
 	    if (data[i] < bestVal){
 		bestVal = data[i];
 	        bestValIndex = i;}
-	    }
+	                                               }
 	    temp = data[p];
 	    data[p] = bestVal;
-	    data[bestValIndex] = temp;}
+	    data[bestValIndex] = temp;         }
       
-  }
-    
-    
+                                           }
 
+    
+    
+/*
 public static void insertionSort(int[] data){
  
  int bestValIndex;
  int bestVal;
  bestValIndex = 0;
  bestVal = data[0]
-<<<<<<< HEAD
   
-        for (int i = 0; i < data.length(); i++) {
-=======
-       
-	 
+
 	for (int i = 0; i < data.length(); i++) {
->>>>>>> 5ca71dce26a35b2dbe8b5ade506abb405d4db6e2
 		int tempi = data[i];
 	for (int p = 1; p < data.length(); p++) { 
 		if (data[p] < bestVal) {
@@ -47,9 +45,15 @@ public static void insertionSort(int[] data){
 	            data[i] = bestVal;
                                }
                                             }
+                                                }
+                                                }
     
     
-    
-    public static void main(Strings[] str){
+*/  
+    public static void main(Strings[] args){
+	int [] a = new int [] {4,5,2,8,3};
+	selectionsort(a);
+    }
 
 }
+
