@@ -29,8 +29,14 @@ public static void insertionSort(int[] data){
  int bestVal;
  bestValIndex = 0;
  bestVal = data[0]
+<<<<<<< HEAD
   
         for (int i = 0; i < data.length(); i++) {
+=======
+       
+	 
+	for (int i = 0; i < data.length(); i++) {
+>>>>>>> 5ca71dce26a35b2dbe8b5ade506abb405d4db6e2
 		int tempi = data[i];
 	for (int p = 1; p < data.length(); p++) { 
 		if (data[p] < bestVal) {
