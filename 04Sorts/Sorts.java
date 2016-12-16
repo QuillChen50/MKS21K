@@ -49,11 +49,22 @@ public static void insertionSort(int[] data){
                                                 }
     
     
-public static bubbleSort(int [] data){
+public static void bubbleSort(int [] data){
+	boolean notswap = true;
 	
-	for (int i = 0; i < data.length(); i++) {
-		if data[i]
+	for (int p = 0; i < data.length(); p++) {
+	for (int i = 1; i < data.length() - 1; i++) {
+		if ( data[i] >= data[i+1] )
+			int temp1 = data[i];
+		        int temp2 = data[i+1];
+		data[i] = temp2;
+		data[i +1] = temp1;
+		notswap = false;
 	}
+	if (notswap == true){
+		return;}}
+	return;}
+		
 
 
     public static void main(Strings[] args){
