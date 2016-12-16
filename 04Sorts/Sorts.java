@@ -25,7 +25,7 @@ public static void selectionSort(int[] data){
 
     
     
-/*
+
 public static void insertionSort(int[] data){
  
  int bestValIndex;
@@ -49,7 +49,13 @@ public static void insertionSort(int[] data){
                                                 }
     
     
-*/  
+public static bubbleSort(int [] data){
+	
+	for (int i = 0; i < data.length(); i++) {
+		if data[i]
+	}
+
+
     public static void main(Strings[] args){
 	int [] a = new int [] {4,5,2,8,3};
 	selectionsort(a);
