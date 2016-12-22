@@ -4,25 +4,25 @@ public class Window2 extends JFrame implements ActionListener{
  private Container pane;
 
  private JButton b;
+ private JButton b1;
  private JLabel l;
  private JTextField t;
- private JCheckBox c;
+ 
  
   //CONSTRUCTOR SETS EVERYTHING UP
   public Window2() {
-     this.setTitle("My first GUI");
+     this.setTitle("TEMPERATURE CONVERSION");
      this.setSize(600,400);
      this.setLocation(100,100);
      this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     
      pane = this.getContentPane();
-     pane.setLayout(new FlowLayout());  //NOTE!! THIS CAN BE CHANGED (see below)
+     pane.setLayout(new GridLayout());  //This was CHANGED 
     
      b = new JButton("CtoF");
      b1= new JButton("FtoC");
      l = new JLabel("" + getActionCommand(),null,JLabel.CENTER);
      t = new JTextField("insert temp here");
-     c = new JCheckBox("Overclock!!!");
      pane.add(l);
      pane.add(b);
      pane.add(t);
@@ -34,10 +34,16 @@ public class Window2 extends JFrame implements ActionListener{
  System.out.println(getActionCommand());}
  
  b.addActionListener(this);
- b.setAction;
+ b.setActionCommand(this);
  
- public String getActionCommand(){
- return Integer.ParseInt(getText());}
+ Object which = e.getSource();
+ 
+ public String getActionCommand(ActionEvent e){
+ if (which == b){
+ return Temperature.CtoF(Integer.ParseInt(getText())) ;}
+ else if (which == b1){
+ return Temperature.FtoC(Integer.ParseInt(getText())) ;}
+ }
  
  
  
