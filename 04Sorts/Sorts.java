@@ -11,7 +11,6 @@ public class Sorts{
     //first loop goes through each number, second loop compares 
     public static void selectionSort(int[] data){
 	String regex = "[0-9]+"; 
-	if (data.matches(regex))
 	int bestValIndex;
 	bestValIndex = 0;
 	for (int p = 0; p < data.length; p++){
@@ -29,41 +28,46 @@ public class Sorts{
 	    }
 	    int temp = data[p];
 	    data[p] = data[bestValIndex];
+
 	    data[bestValIndex] = temp;
 	    //System.out.println(Arrays.toString(data));
 	    //Just trying to see what was changing
 	}
+
       
     }
 
     
        
-    /*
+    
 	  public static void insertionSort(int[] data){
  
-	int bestValIndex;
-	numStuffPrev = 0;
+	int unSortedVal = 0;
+	int unSortedIndex = 1;
   
-
-	 for (int p = 0; p < data.length; p++){
-	    bestValIndex = p;
+	 for (int p = 1; p < data.length; p++){
+	    unSortedIndex = p;
+	    unSortedVal = data[p];
+	    System.out.println("" + unSortedVal);
 	    //loop that takes each number from the data
-	    for (int i = p +1 ; i < data.length; i++){ 
-		//loop comparing that # with those after it for (int i = 0; i < data.length; i++) {
-	  int tempi = data[i];
-	  for (int p = 1; p < data.length; p++) { 
-	  if (data[p] < bestVal) {
-	  bestValIndex = p;
-	  int temp = data[p];
-	  bestVal = temp;}}
-	  data[bestValIndex] = tempi;
-	  data[i] = bestVal;
+	    for (int i = 1; i < p; i++){
+		if (data[p-i] > unSortedVal){
+		    data[p-i+1] = data[p-i];
+		    if (i == p -1){
+			data[p-i+1] = unSortedVal;}
+		System.out.println("" + data[p-i]);}
+	        
+		//this part was messing up my code by sorting the list to be
+		//filled the rest with the largest value
+		//else if (data[p-i] <= unSortedVal){
+		//data[p-i+1] = unSortedVal;}
+	    }
+	 }
 	  }
-	  }
-	  }
-	  }
+}
+		
     
-
+/*
 	  public static void bubbleSort(int [] data){
 	  boolean notswap = true;
 	
@@ -84,5 +88,5 @@ public class Sorts{
 
     
 
-}
+
 
