@@ -9,7 +9,9 @@ public class Sorts{
     //How it works
     //Go through list length() -1 times, looking for the best value eah time
     //first loop goes through each number, second loop compares 
-    public static void selectionSort(int[] data){  
+    public static void selectionSort(int[] data){
+	String regex = "[0-9]+"; 
+	if (data.matches(regex))
 	int bestValIndex;
 	bestValIndex = 0;
 	for (int p = 0; p < data.length; p++){
@@ -36,11 +38,11 @@ public class Sorts{
 
     
        
-
+    /*
 	  public static void insertionSort(int[] data){
  
 	int bestValIndex;
-	bestValIndex = 0;
+	numStuffPrev = 0;
   
 
 	 for (int p = 0; p < data.length; p++){
@@ -61,7 +63,7 @@ public class Sorts{
 	  }
 	  }
     
-/*
+
 	  public static void bubbleSort(int [] data){
 	  boolean notswap = true;
 	

@@ -10,3 +10,4 @@ public class Temperature{
 
 	return (t-32)*5/9;
     }
+}
