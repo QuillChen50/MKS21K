@@ -18,9 +18,10 @@ public class Window2 extends JFrame implements ActionListener{
      pane = this.getContentPane();
      pane.setLayout(new FlowLayout());  //NOTE!! THIS CAN BE CHANGED (see below)
     
-     b = new JButton("Do Nothing");
-     l = new JLabel("This is AWESOME! (lies)",null,JLabel.CENTER);
-     t = new JTextField(12);
+     b = new JButton("CtoF");
+     b1= new JButton("FtoC");
+     l = new JLabel("" + getActionCommand(),null,JLabel.CENTER);
+     t = new JTextField("insert temp here");
      c = new JCheckBox("Overclock!!!");
      pane.add(l);
      pane.add(b);
@@ -33,7 +34,12 @@ public class Window2 extends JFrame implements ActionListener{
  System.out.println(getActionCommand());}
  
  b.addActionListener(this);
- b.setAction
+ b.setAction;
+ 
+ public String getActionCommand(){
+ return Integer.ParseInt(getText());}
+ 
+ 
  
  
 
