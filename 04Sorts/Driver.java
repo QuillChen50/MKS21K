@@ -19,5 +19,9 @@ public static void main(String[] args){
 	System.out.println(Arrays.toString(a));
 	Sorts.insertionSort(b);
 	System.out.println(Arrays.toString(b));
+
+	Sorts.bubbleSort(a);
+	System.out.println(Arrays.toString(a));
+	
     }
 }

@@ -61,21 +61,42 @@ public class Sorts{
 		//filled the rest with the largest value
 		//else if (data[p-i] <= unSortedVal){
 		//data[p-i+1] = unSortedVal;}
+
+	      
 	    }
 	 }
 	  }
-}
 		
     
-/*
 	  public static void bubbleSort(int [] data){
+	  boolean swap = true;
+	  int current = 0;
+	      if (swap){
+		  swap = false;
+		  for (int i = 0; i < data.length - 1; i++){
+		      if (data[i] > data[i+1]){
+			  //this swaps the two if the former is bigger than latter
+			  current = data[i];
+			  data[i] = data[i+1];
+			  data[i+1] = current;
+		      }
+		  }
+	      }
+	      else
+		  {return;}
+	  }
+			  
+	  
+	      /*
+This was my original code that didn't work
 	  boolean notswap = true;
-	
-	  for (int p = 0; i < data.length; p++) {
+	  int temp1 = 0;
+	  int temp2 = 0;
+	  for (int p = 0; p < data.length; p++) {
 	  for (int i = 1; i < data.length - 1; i++) {
 	  if ( data[i] >= data[i+1] )
-	  int temp1 = data[i];
-	  int temp2 = data[i+1];
+	  temp1 = data[i];
+	  temp2 = data[i+1];
 	  data[i] = temp2;
 	  data[i +1] = temp1;
 	  notswap = false;
@@ -83,8 +104,9 @@ public class Sorts{
 	  if (notswap == true){
 	  return;}}
 	  return;}
+	      */
 		
-    */
+}
 
     
 
