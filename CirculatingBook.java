@@ -4,19 +4,30 @@ public String currentHolder;
 public String dueDate;
 
 public CirculatingBook(String a, String t, String i, String c){
+    /*Originally thought it would be like this but then realized I could use super
 setAuthor(a);
 setTitle(t);
 setISBN(i);
-callNumber = c;
+callNumber = c;*/
 currentHolder = "";
 dueDate = "";
+super(a,t,i,c)
+    
 }
 
 public void checkout (String patron, String due){
-currentHolder = patron;
-dueDate = due;
+    setCurrentHolder(patron);
+setDueDate(due);
 }
 
+
+    //now for some set methods
+
+    public setDueDate(String date){
+	dueDate = date;}
+    public setCurrentHolder (String Holder){
+	currentHolder = Holder;}
+    
 public void returned(){
 currentHolder = "";
 dueDate = "";
