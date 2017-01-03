@@ -3,11 +3,8 @@ class ReferenceBook extends LibraryBook{
 private String collection;
 
 public ReferenceBook (String a, String t, String i, String c, String co){
-setAuthor(a);
-setTitle(t);
-setISBN(i);
-callNumber = c;
-collection = co;
+    super(a, t, i, c);
+setCollection(co);
 }
 
 //Getter and Setter
@@ -33,7 +30,8 @@ return "non-circulating reference book"
 }
 
 public String toString(){
-return title + author + ISBN + circulationStatus() + callNumber + collection;
+    //originally I completely forgot about super
+    return super.toString() + collection;
 }
 
 }
